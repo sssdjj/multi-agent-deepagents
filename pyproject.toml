@@ -1,0 +1,36 @@
+[project]
+name = "multi-agent-deepagents"
+version = "0.1.0"
+authors = [
+  { name="Your Name", email="your.email@example.com" }
+]
+description = "Multi-agent collaborative development team based on deepagents"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file="LICENSE" }
+keywords = ["ai", "multi-agent", "deepagents", "langchain", "langgraph"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "deepagents>=0.4.12",
+    "langchain>=1.0",
+    "langchain-openai>=0.1.0",
+    "langchain-deepseek>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "langgraph>=1.0",
+    "tavily-python>=0.7.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 88
+select = ["E", "W", "F", "I", "B"]

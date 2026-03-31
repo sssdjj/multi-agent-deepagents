@@ -1,29 +1,7 @@
 """
 SubAgent1：产品文档编写员
 职责：根据PM分配的需求，编写完整的产品需求文档，保存为markdown文档
-
-subagent = {
-    "name": "reviewer",
-    "description": "代码审查专家，帮助审查代码质量和安全问题",
-    "system_prompt": ""你是一个严格的代码审查专家。
-
-    审查时关注：
-    1. 代码风格一致性
-    2. 错误处理
-    3. 安全问题
-    4. 性能问题
-    5. 测试覆盖
-
-    审查结果要具体、可操作。"",
-    "tools": [some_tools],  # 可选：指定工具
-    "model": "claude-sonnet-4",  # 可选：指定模型
-    "skills": ["/reviewer/skills/"],  # 可选：子代理独立的技能
-    "middleware": [...],  # 可选：额外的中间件
-    "interrupt_on": {"edit_file": True},  # 可选：人在环中配置
-}
 """
-
-
 
 doc_agent = {
     "name": "DocumentWriter",
@@ -48,6 +26,6 @@ doc_agent = {
 完成文档编写后，通知PM，PM会继续分配后续任务给开发团队。
 """,
     "tools": [],
-    "skills":[]
+    "skills": [],
     # "model": llm_qwen_plus  # 取消注释并根据实际情况修改模型
 }
